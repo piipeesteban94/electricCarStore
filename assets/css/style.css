@@ -1,0 +1,282 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #1c1c1c;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header  main"
+    "header  main"
+    "footer  main";
+  grid-template-rows: 70px 1fr 85px;
+  grid: template columns 20% 1fr;
+}
+.header {
+  padding-top: 20px;
+  grid-area: header;
+  background-color: #00579c;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo i {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.titulo h1 {
+  font-size: 18px;
+}
+.header_nav {
+  width: 100%;
+  height: 23%;
+  display: flex;
+  margin-top: 20px;
+}
+.header_nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 0px;
+}
+.header_nav ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.hamburguer {
+  display: none;
+}
+
+.main {
+  grid-area: main;
+}
+
+.section-price {
+  padding-top: 10px;
+  background-color: #e2e2e2;
+  color: #000;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.section-price h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section-price select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.section-price select:hover {
+  cursor: pointer;
+}
+
+.container-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-cards {
+  width: 30%;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+.img-cards {
+  width: 100%;
+}
+.img-cards img {
+  max-width: 100%;
+}
+
+.details-cards {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.details-cards button {
+  margin-top: 10px;
+  width: 40%;
+  padding: 6px;
+  font-size: 16px;
+  background-color: #1d65a0;
+  color: #fff;
+  border: 1px solid #1d65a0;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.details-cards button {
+  cursor: pointer;
+}
+
+.container-pages {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.container-pages div{
+  border: 1px solid #ccc;
+  padding: 15px;
+  color: #1d65a0;
+}
+
+footer {
+  background-color: #002f6c;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding-top: 20px;
+}
+.rrss {
+  margin-bottom: 1px;
+  font-size: 18px;
+}
+footer p {
+  margin: 0px;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main  main"
+      "footer  footer";
+    grid-template-rows: 70px 1fr 85px;
+    grid: template columns 20% 1fr;
+  }
+  .header {
+    padding: 10px;
+    grid-area: header;
+    background-color: #00579c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  .titulo {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+  .titulo i {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  .titulo h1 {
+    font-size: 18px;
+  }
+  .header_nav {
+    width: 55%;
+    display: flex;
+    align-items: center;
+  }
+  .header_nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+
+  .section-cards {
+    width: 40%;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-rows: 0px 1fr 85px;
+    grid: template columns 20% 1fr;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999px;
+    height: 70px;
+  }
+
+  .section-cards {
+    width: 90%;
+  }
+  .hamburguer {
+    width: 30%;
+    display: flex;
+    height: 100px;
+    justify-content: flex-end;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .toggle:hover {
+    cursor: pointer;
+  }
+  .header_nav {
+    display: none;
+  }
+  .header_nav {
+    margin-top: 0px;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    background-color: #414141;
+    top: 68px;
+    left: 0px;
+    text-align: center;
+    flex-direction: column;
+    transform: translateX(-120%);
+    transition: transform 0.2s;
+  }
+}
